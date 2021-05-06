@@ -78,4 +78,4 @@ var timer = setTimeout (function(){
         document.getElementById("risultato").innerHTML = "I numeri indovinati sono: " + numeriIndovinati.length + " : " + numeriIndovinati;
     }
     
-}, 1000);
+}, 30000);
