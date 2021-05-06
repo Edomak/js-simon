@@ -35,7 +35,9 @@ for (var i = 1; i <= 5; i++ ) {
 alert("I numeri da ricordare sono: " + numeriRandom);
 console.log(numeriRandom);
 
-// Timing 
+// Timing Section:
+
+
 
 
 
