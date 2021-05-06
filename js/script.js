@@ -30,11 +30,10 @@ function isInArray (element, array) {
 
 var numeroRandom;
 var numeriRandom = [];
-var numeriUtente = [];
 var numeriIndovinati = [];
 var numeriMancanti = [];
 
-// Genero 5 numeri in un range che va da 1 a 100 usando la funzione getRandomNumber tramite un ciclo for di 5 iterazioni:
+// Genero 5 numeri in un range che va da 1 a 100 usando la funzione getRandomNumber tramite un ciclo while di n iterazioni:
 
 var i = 1;
 while (numeriRandom.length < 5) {
@@ -47,8 +46,9 @@ while (numeriRandom.length < 5) {
    i++
 }
 
-// Espongo i numeri random usciti all'utente tramite un alert e li stampo in console:
-alert("I numeri da ricordare sono: " + numeriRandom + "\nBuona fortuna!");
+// Espongo i numeri random usciti all'utente tramite un alert e li stampo in console per Debug:
+
+alert("I numeri da ricordare sono: " + numeriRandom + "\nHai 30 secondi di tempo!" + "\nBuona fortuna!");
 console.log("I numeri da ricordare sono: " + numeriRandom);
 
 // Timing section: imposto un timer di 30s in modo che l'utente possa ricordarsi i numeri visti in precedenza, dopo di che gli chiedo per 5 volte di inserirli in un prompt:
@@ -58,11 +58,9 @@ var timer = setTimeout (function(){
     for (var i = 1; i <= 5; i++ ) {
 
         var numeroUtente = parseInt(prompt("Inserisci ora i numeri che ti ricordi!"))
-        // Pusho i 5 numeri nell'array dei [numeriUtente] 
-        numeriUtente.push(numeroUtente);
-
+        
         if (numeriRandom.includes(numeroUtente)) {
-            numeriIndovinati.push(numeroUtente);
+            numeriIndovinati.push(numeroUtente); 
         } else if (!numeriRandom.includes(numeroUtente)) {
             numeriMancanti.push(numeroUtente);
         }
